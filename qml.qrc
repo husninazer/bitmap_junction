@@ -1,0 +1,9 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>map.qml</file>
+        <file>qr.qml</file>
+        <file>icons/map.jpeg</file>
+        <file>qr.js</file>
+    </qresource>
+</RCC>
