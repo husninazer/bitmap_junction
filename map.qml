@@ -61,7 +61,7 @@ property bool deviceState: device.state
 Image {
     id: imageMap
     //source: "qrc:/icons/map.jpeg"
-    source: "qrc:/icons/last.bmp"
+    source: "qrc:/icons/last.jpeg"
     width: height = parent.width
 
     Timer {
@@ -74,6 +74,8 @@ Image {
                 deviceBusy.visible = true
                // info.visible = true;
             }
+
+            updateBubble();
         }
     }
 
@@ -130,6 +132,8 @@ ListView {
     anchors.bottom: parent.bottom
     model: device.devicesList
 
+
+
     BusyIndicator {
         id: deviceBusy
         anchors.centerIn: parent
@@ -161,7 +165,7 @@ ListView {
 
         Label {
             id: deviceName
-            text: modelData.deviceRssi
+            text: modelData.deviceNumber + "   "+ modelData.deviceRssi
             anchors.top: parent.top
             anchors.topMargin: 5
         }
@@ -176,6 +180,10 @@ ListView {
 
 
     }
+}
+
+function updateBubble() {
+
 }
 
 }

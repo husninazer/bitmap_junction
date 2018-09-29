@@ -89,6 +89,31 @@ QVariant DeviceInfo::getRssi() const
     return device.rssi();
 }
 
+QString DeviceInfo::getNumber() const
+{
+    QString addr = this->getAddress();
+
+    if( addr == "EA:95:D4:2C:EA:1E") {
+        return "2";
+    }
+    if(addr== "FD:11:FA:82:12:34" ) {
+        return "4";
+    }
+    if (addr ==  "E9:61:6E:AB:16:45" ) {
+        return "5";
+    }
+
+    if (addr ==  "F2:7D:6E:EB:B3:91" ) {
+        return "3";
+    }
+    if (addr == "CB:7F:BC:D4:94:99" ) {
+        return "1";
+    }
+
+
+
+}
+
 QBluetoothDeviceInfo DeviceInfo::getDevice()
 {
     return device;
