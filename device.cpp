@@ -121,7 +121,8 @@ void Device::addDevice(const QBluetoothDeviceInfo &info)
                 d->getAddress() == "F2:7D:6E:EB:B3:91" ||
                 d->getAddress() == "CB:7F:BC:D4:94:99")
         {
-            if(!devices.contains(d))
+
+            if(!devices.length() == 5)
             devices.append(d);
             else
             {
